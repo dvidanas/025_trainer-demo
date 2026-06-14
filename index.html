@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANTIGRAVITY TRAINER | Entrenamiento de Élite Basado en Disciplina</title>
+  <meta name="description" content="Deja de suponer. Optimiza tu físico y rendimiento con el sistema de entrenamiento, nutrición y suplementación de élite Antigravity. Resultados reales con disciplina deportiva aplicada.">
+  <link rel="icon" type="image/png" href="assets/trainer.png">
+  
+  <!-- Google Fonts: Oswald para Headings, Inter para Cuerpo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configuración de Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#D4FF00',
+            zinc: {
+              950: '#09090B',
+              900: '#18181B',
+              800: '#27272A',
+              700: '#3F3F46',
+              400: '#A1A1AA',
+            }
+          },
+          fontFamily: {
+            oswald: ['Oswald', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            glow: '0 0 15px rgba(212, 255, 0, 0.25)',
+            'glow-lg': '0 0 25px rgba(212, 255, 0, 0.4)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Animaciones Extra y Estilos Globales -->
+  <style>
+    /* Estilos globales */
+    body {
+      background-color: #09090B;
+      color: #F4F4F5;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .font-oswald {
+      font-family: 'Oswald', sans-serif;
+    }
+
+    /* Animación de pulso infinito para el botón flotante */
+    @keyframes pulse-glow {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(212, 255, 0, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 20px 6px rgba(212, 255, 0, 0.3);
+      }
+    }
+    .animate-pulse-glow {
+      animation: pulse-glow 2s infinite;
+    }
+
+    /* Animación sutil de levitación para elementos 'Antigravity' */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+    
+    /* Scrollbar estilizada */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #09090B;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272A;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4FF00;
+    }
+  </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+  <!-- ==================== 1. HEADER ==================== -->
+  <header class="sticky top-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-900 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 group">
+        <span class="text-2xl font-bold font-oswald uppercase tracking-wider text-white group-hover:text-accent transition-colors">
+          AG <span class="text-accent group-hover:text-white">TRAINER</span>
+        </span>
+      </a>
+
+      <!-- Navegación Desktop -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#programas" class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Programas</a>
+        <a href="#suplementos" class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Suplementación</a>
+        <a href="#testimonios" class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Testimonios</a>
+        <a href="#solucion" class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Metodología</a>
+      </nav>
+
+      <!-- CTA Derecha Desktop -->
+      <div class="hidden md:block">
+        <a href="#chat-section" class="px-5 py-2.5 bg-accent text-zinc-950 text-xs font-bold font-oswald uppercase tracking-wide rounded-lg hover:bg-white hover:shadow-glow transition-all duration-300">
+          Iniciar Diagnóstico
+        </a>
+      </div>
+
+      <!-- Botón Menú Mobile -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-zinc-400 hover:text-accent focus:outline-none" aria-label="Abrir Menú">
+        <!-- Icono Hamburguesa (SVG) -->
+        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <!-- Icono Cerrar (SVG oculto por defecto) -->
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú Desplegable Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-b border-zinc-800 transition-all duration-300">
+      <div class="px-4 pt-2 pb-6 space-y-3">
+        <a href="#programas" class="block px-3 py-2.5 rounded-lg text-base font-medium text-zinc-300 hover:bg-zinc-800 hover:text-accent transition-colors">Programas</a>
+        <a href="#suplementos" class="block px-3 py-2.5 rounded-lg text-base font-medium text-zinc-300 hover:bg-zinc-800 hover:text-accent transition-colors">Suplementación</a>
+        <a href="#testimonios" class="block px-3 py-2.5 rounded-lg text-base font-medium text-zinc-300 hover:bg-zinc-800 hover:text-accent transition-colors">Testimonios</a>
+        <a href="#solucion" class="block px-3 py-2.5 rounded-lg text-base font-medium text-zinc-300 hover:bg-zinc-800 hover:text-accent transition-colors">Metodología</a>
+        <a href="#chat-section" class="block w-full text-center px-4 py-3 bg-accent text-zinc-950 font-bold font-oswald uppercase tracking-wider rounded-lg hover:bg-white transition-all duration-300">
+          Iniciar Diagnóstico Deportivo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 2. HERO SECTION ==================== -->
+  <section class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
+    <!-- Luces de fondo (Efecto Antigravity) -->
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="absolute bottom-10 right-1/4 w-80 h-80 bg-zinc-800/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Columna Izquierda: Mensaje Clave -->
+        <div class="lg:col-span-7 text-center lg:text-left flex flex-col items-center lg:items-start">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/20 bg-accent/5 text-xs text-accent font-medium uppercase tracking-wider mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent animate-ping"></span> Concepto Antigravity
+          </span>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-oswald uppercase tracking-tight text-white leading-tight">
+            Deja de suponer. <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-accent to-accent">
+              Entrena con disciplina
+            </span> <br>
+            y resultados reales.
+          </h1>
+          
+          <p class="mt-6 text-base sm:text-lg text-zinc-400 max-w-xl font-light leading-relaxed">
+            Consigue la máxima optimización de tu físico y rendimiento. Integramos programación biomecánica, nutrición metabólica de precisión y suplementación élite bajo un método disciplinado validado.
+          </p>
+
+          <div class="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <a href="#chat-section" class="px-8 py-4 bg-accent text-zinc-950 font-bold font-oswald uppercase tracking-wider rounded-xl hover:bg-white hover:scale-105 hover:shadow-glow transition-all duration-300 text-center text-sm">
+              Iniciar Diagnóstico Deportivo Gratuito
+            </a>
+            <a href="#programas" class="px-8 py-4 border border-zinc-800 bg-zinc-900/50 text-zinc-300 font-bold font-oswald uppercase tracking-wider rounded-xl hover:border-zinc-700 hover:text-white transition-all duration-300 text-center text-sm">
+              Ver Programas
+            </a>
+          </div>
+
+          <!-- Métricas Rápidas -->
+          <div class="mt-12 grid grid-cols-3 gap-6 border-t border-zinc-900 pt-8 w-full">
+            <div>
+              <p class="text-2xl sm:text-3xl font-bold font-oswald text-white uppercase">+94%</p>
+              <p class="text-xs text-zinc-400 mt-1">Éxito Comprobado</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-bold font-oswald text-white uppercase">+500</p>
+              <p class="text-xs text-zinc-400 mt-1">Físicos Optimizados</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-bold font-oswald text-white uppercase">100%</p>
+              <p class="text-xs text-zinc-400 mt-1">Bases Disciplinadas</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Imagen del Entrenador con Telemetría -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-[380px] sm:max-w-[420px] aspect-[4/5] rounded-2xl overflow-visible border border-zinc-800 bg-zinc-900/40 p-4 backdrop-blur-sm shadow-2xl">
+            <!-- Marco Interno Estilizado -->
+            <div class="relative w-full h-full rounded-xl overflow-hidden bg-zinc-950 flex items-end">
+              <!-- Imagen del Entrenador -->
+              <img src="assets/trainer.png" alt="Entrenador Antigravity" class="w-full h-full object-cover object-center relative z-10 filter grayscale contrast-125 hover:grayscale-0 transition-all duration-700">
+              
+              <!-- Gradiente de Contraste para la Base -->
+              <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent z-20"></div>
+            </div>
+
+            <!-- Widget 1 Flotante: VO2 Max (Top Left) -->
+            <div class="absolute -top-4 -left-6 bg-zinc-900/90 border border-zinc-800 px-4 py-2.5 rounded-xl flex items-center gap-3 z-30 shadow-lg animate-float backdrop-blur-md">
+              <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
+                <!-- Icono Corazón (SVG) -->
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-[10px] text-zinc-400 uppercase font-medium">VO2 MÁXIMO</p>
+                <p class="text-sm font-bold font-oswald text-white">62.8 mL/kg/min</p>
+              </div>
+            </div>
+
+            <!-- Widget 2 Flotante: Estado del Coach (Bottom Right) -->
+            <div class="absolute -bottom-4 -right-4 bg-zinc-900/90 border border-zinc-800 px-4 py-3 rounded-xl flex items-center gap-3 z-30 shadow-lg backdrop-blur-md" style="animation-delay: 2s;">
+              <div class="w-3 h-3 rounded-full bg-accent animate-ping"></div>
+              <div>
+                <p class="text-[10px] text-zinc-400 uppercase font-medium">SISTEMA ACTIVE</p>
+                <p class="text-xs font-bold font-oswald text-accent uppercase tracking-wider">ANTIGRAVITY ON</p>
+              </div>
+            </div>
+
+            <!-- Widget 3 Flotante: Fat Burn Rate (Middle Left) -->
+            <div class="absolute top-1/2 -left-10 bg-zinc-900/95 border border-zinc-800 px-3 py-2 rounded-xl flex items-center gap-2 z-30 shadow-lg backdrop-blur-md">
+              <span class="text-xs font-bold font-oswald text-white">FAT BURN:</span>
+              <span class="text-xs text-accent font-bold">1.2g/min</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. PROBLEMA / SOLUCIÓN ==================== -->
+  <section id="solucion" class="py-24 bg-zinc-950 border-t border-zinc-900 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Encabezado de Sección -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs text-accent font-bold uppercase tracking-widest">El Cambio de Paradigma</h2>
+        <p class="text-3xl sm:text-4xl font-bold font-oswald text-white uppercase mt-2">¿Por qué sigues estancado?</p>
+        <p class="text-sm text-zinc-400 mt-4">
+          La mayoría de las personas entrenan y comen basándose en suposiciones. El cuerpo humano responde a estímulos biológicos precisos, no a adivinanzas.
+        </p>
+      </div>
+
+      <!-- Grid Comparativo -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Tarjeta Problema (El Camino Tradicional) -->
+        <div class="bg-zinc-900/30 border border-zinc-800/80 rounded-xl p-8 hover:border-red-900/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-lg bg-red-950/20 border border-red-900/30 flex items-center justify-center text-red-500">
+              <!-- Icono X/Advertencia (SVG) -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold font-oswald text-zinc-300 uppercase tracking-wide">El Enfoque Común (A ciegas)</h3>
+          </div>
+
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">✕</span>
+              <p class="text-sm text-zinc-400">
+                <strong class="text-zinc-300">Rutinas genéricas de internet:</strong> Copiar la rutina de un fisicoculturista famoso que no se adapta a tu estructura ósea ni historial deportivo.
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">✕</span>
+              <p class="text-sm text-zinc-400">
+                <strong class="text-zinc-300">Dietas restrictivas e insostenibles:</strong> Pasar hambre o eliminar carbohidratos por completo, lo que destruye tu adherencia y ralentiza tu metabolismo.
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">✕</span>
+              <p class="text-sm text-zinc-400">
+                <strong class="text-zinc-300">Falta de Sobrecarga Progresiva:</strong> Ir al gimnasio a "sudar" o "cansarte" usando siempre los mismos pesos y repeticiones, sin medir tu volumen de trabajo.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tarjeta Solución (El Método Antigravity) -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-8 shadow-glow/5 hover:border-accent/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center text-accent">
+              <!-- Icono Check (SVG) -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold font-oswald text-accent uppercase tracking-wide">El Método Antigravity (Disciplinado)</h3>
+          </div>
+
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1">✓</span>
+              <p class="text-sm text-zinc-300">
+                <strong class="text-white">Programación inteligente y biomecánica:</strong> Ejercicios seleccionados específicamente para tus palancas anatómicas que estimulan el músculo sin dañar tus articulaciones.
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1">✓</span>
+              <p class="text-sm text-zinc-300">
+                <strong class="text-white">Nutrición metabólica personalizada:</strong> Estimación exacta de tu gasto energético basal y cálculo preciso de macros con alimentos que realmente te gustan.
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1">✓</span>
+              <p class="text-sm text-zinc-300">
+                <strong class="text-white">Control digital de variables métricas:</strong> Registro semanal de volumen de entrenamiento, fatiga, calidad de sueño y bio-medidas para ajustar la dosis de entrenamiento en tiempo real.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. GRILLA DE PROGRAMAS ==================== -->
+  <section id="programas" class="py-24 bg-zinc-900/30 border-t border-zinc-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Encabezado -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs text-accent font-bold uppercase tracking-widest">Sistemas de Coaching</h2>
+        <p class="text-3xl sm:text-4xl font-bold font-oswald text-white uppercase mt-2">Nuestras Líneas de Entrenamiento</p>
+        <p class="text-sm text-zinc-400 mt-4">Programas integrales diseñados para aquellos listos para comprometerse con el máximo rendimiento físico y mental.</p>
+      </div>
+
+      <!-- Grid 2 Tarjetas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        
+        <!-- Tarjeta 1: Personal Coaching 1-on-1 -->
+        <div class="bg-zinc-900 border border-zinc-800 hover:border-accent/20 rounded-xl p-8 flex flex-col justify-between hover:shadow-glow/5 transition-all duration-300 group">
+          <div>
+            <div class="flex justify-between items-start mb-6">
+              <span class="px-2.5 py-1 rounded bg-accent/10 border border-accent/20 text-[10px] text-accent font-bold uppercase tracking-wider">Altamente Recomendado</span>
+              <span class="text-xs text-zinc-500 uppercase font-medium">PROGRAMA COMPLETO</span>
+            </div>
+            
+            <h3 class="text-2xl font-bold font-oswald text-white uppercase group-hover:text-accent transition-colors">Elite Personal Coaching 1-on-1</h3>
+            <p class="text-sm text-zinc-400 mt-3">Planificación y seguimiento diario disciplinado 100% individualizado para cambios estéticos y de fuerza exponenciales.</p>
+            
+            <!-- Características -->
+            <ul class="mt-8 space-y-3">
+              <li class="flex items-center gap-3 text-sm text-zinc-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                Rutina biomecánica en App personalizada
+              </li>
+              <li class="flex items-center gap-3 text-sm text-zinc-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                Ajustes semanales basados en fatiga (RIR/RPE)
+              </li>
+              <li class="flex items-center gap-3 text-sm text-zinc-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                Soporte diario prioritario vía WhatsApp
+              </li>
+              <li class="flex items-center gap-3 text-sm text-zinc-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                Videollamada mensual de revisión de técnica
+              </li>
+            </ul>
+          </div>
+          
+          <div class="mt-10">
+            <a href="#chat-section" class="block w-full py-3.5 bg-zinc-800 text-center text-xs font-bold font-oswald text-white uppercase tracking-wider rounded-lg group-hover:bg-accent group-hover:text-zinc-950 transition-all duration-300">
+              Aplicar al Programa
+            </a>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Asesoría Nutricional Profesional -->
+        <div class="bg-zinc-900 border border-zinc-800 hover:border-accent/20 rounded-xl p-8 flex flex-col justify-between hover:shadow-glow/5 transition-all duration-300 group">
+          <div>
+            <div class="flex justify-between items-start mb-6">
+              <span class="px-2.5 py-1 rounded bg-zinc-800 border border-zinc-700 text-[10px] text-zinc-400 font-bold uppercase tracking-wider">Enfoque Metabólico</span>
+              <span class="text-xs text-zinc-500 uppercase font-medium">NUTRICIÓN DISCIPLINADA</span>
+            </div>
+            
+            <h3 class="text-2xl font-bold font-oswald text-white uppercase group-hover:text-accent transition-colors">Asesoría Nutricional Disciplinada</h3>
+            <p class="text-sm text-zinc-400 mt-3">Estrategia nutricional adaptada a tu tasa metabólica, enfocada en la recomposición corporal inteligente sin prohibiciones.</p>
+            
+            <!-- Características -->
+            <ul class="mt-8 space-y-3">
+              <li class="flex items-center gap-3 text-sm text-zinc-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                Cálculo de Requerimiento Energético Basal
+              </li>
+              <li class="flex items-center gap-3 text-sm text-zinc-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                Distribución de macronutrientes flexible
+              </li>
+              <li class="flex items-center gap-3 text-sm text-zinc-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                E-book de recetas saludables y equivalencias
+              </li>
+              <li class="flex items-center gap-3 text-sm text-zinc-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                Ajustes quincenales según evolución metabólica
+              </li>
+            </ul>
+          </div>
+          
+          <div class="mt-10">
+            <a href="#chat-section" class="block w-full py-3.5 bg-zinc-800 text-center text-xs font-bold font-oswald text-white uppercase tracking-wider rounded-lg group-hover:bg-accent group-hover:text-zinc-950 transition-all duration-300">
+              Aplicar al Programa
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. TIENDA DE SUPLEMENTACIÓN ÉLITE ==================== -->
+  <section id="suplementos" class="py-24 bg-zinc-950 border-t border-zinc-900 relative">
+    <!-- Luz de fondo -->
+    <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Encabezado de Sección -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs text-accent font-bold uppercase tracking-widest">Optimización Biológica</h2>
+        <p class="text-3xl sm:text-4xl font-bold font-oswald text-white uppercase mt-2">Suplementación Antigravity</p>
+        <p class="text-sm text-zinc-400 mt-4">
+          Nutrientes críticos de grado farmacéutico, probados con disciplina y formulados para acelerar tu recuperación, síntesis de proteína y potencia muscular.
+        </p>
+      </div>
+
+      <!-- Grilla de Productos -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Producto 1: Iso Whey Active -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 flex flex-col justify-between hover:border-accent/30 hover:shadow-glow/5 transition-all duration-300 group">
+          <div>
+            <!-- Contenedor de Imagen Real del Producto -->
+            <div class="relative w-full aspect-square bg-zinc-950 rounded-lg overflow-hidden border border-zinc-800/80 mb-6 flex items-center justify-center group-hover:border-zinc-800 transition-colors">
+              <span class="absolute top-3 left-3 z-10 px-2 py-0.5 rounded bg-accent text-[9px] font-bold text-zinc-950 uppercase">Best Seller</span>
+              
+              <img src="assets/iso_whey.png" alt="Iso Whey Active" class="w-full h-full object-cover object-center filter grayscale contrast-110 group-hover:grayscale-0 transition-all duration-500">
+              
+              <!-- Insignia de Pureza -->
+              <div class="absolute bottom-3 right-3 z-10 text-[10px] text-zinc-300 font-mono bg-zinc-950/80 px-2 py-0.5 rounded border border-zinc-850">92% WPI</div>
+            </div>
+
+            <!-- Ficha Técnica -->
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-semibold text-accent uppercase tracking-wider">PROTEÍNA AISLADA</span>
+              <span class="text-xs text-zinc-500">2 LBS (907G)</span>
+            </div>
+            
+            <h3 class="text-lg font-bold font-oswald text-white uppercase mt-2">Iso Whey Active</h3>
+            <p class="text-xs text-zinc-400 mt-2 line-clamp-2">Aislado puro de proteína de suero microfiltrada a flujo cruzado. 27g de proteína limpia por scoop, 0g carbohidratos, 0g lactosa.</p>
+            
+            <!-- Beneficios rápidos -->
+            <div class="mt-4 flex flex-wrap gap-1.5">
+              <span class="text-[9px] bg-zinc-950 border border-zinc-850 px-2 py-0.5 rounded text-zinc-300">Rápida Absorción</span>
+              <span class="text-[9px] bg-zinc-950 border border-zinc-850 px-2 py-0.5 rounded text-zinc-300">Cero Azúcar</span>
+              <span class="text-[9px] bg-zinc-950 border border-zinc-850 px-2 py-0.5 rounded text-zinc-300">Gluten Free</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between gap-4">
+            <div>
+              <p class="text-[10px] text-zinc-500 uppercase">PRECIO COOPERATIVO</p>
+              <p class="text-xl font-bold font-oswald text-white">$54.90</p>
+            </div>
+            
+            <!-- WhatsApp checkout button -->
+            <a href="https://wa.me/5491199999999?text=Hola!%20Quiero%20comprar%20Iso%20Whey%20Active%20por%20$54.90.%20%C2%BFCu%C3%A1l%20es%20el%20m%C3%A9todo%20de%20pago?" target="_blank" class="px-4 py-2.5 bg-accent text-zinc-950 text-xs font-bold font-oswald uppercase tracking-wider rounded-lg hover:bg-white transition-colors flex items-center gap-1.5">
+              <!-- Mini Icono WhatsApp -->
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.417 9.863-9.864.003-2.637-1.023-5.122-2.89-6.991C16.576 1.882 14.09 .856 11.455.856c-5.44 0-9.866 4.418-9.87 9.865-.001 1.77.465 3.5 1.346 5.025l-1.012 3.7 3.79-.994z"/>
+              </svg>
+              Comprar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Producto 2: Pure Creatine -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 flex flex-col justify-between hover:border-accent/30 hover:shadow-glow/5 transition-all duration-300 group">
+          <div>
+            <!-- Contenedor de Imagen Real del Producto -->
+            <div class="relative w-full aspect-square bg-zinc-950 rounded-lg overflow-hidden border border-zinc-800/80 mb-6 flex items-center justify-center group-hover:border-zinc-800 transition-colors">
+              <img src="assets/creatine.png" alt="Pure Creatine" class="w-full h-full object-cover object-center filter grayscale contrast-110 group-hover:grayscale-0 transition-all duration-500">
+              
+              <!-- Insignia de Pureza -->
+              <div class="absolute bottom-3 right-3 z-10 text-[10px] text-zinc-300 font-mono bg-zinc-950/80 px-2 py-0.5 rounded border border-zinc-850">Creapure®</div>
+            </div>
+
+            <!-- Ficha Técnica -->
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-semibold text-accent uppercase tracking-wider">CREATINA MICRONIZADA</span>
+              <span class="text-xs text-zinc-500">300G (60 SERV)</span>
+            </div>
+            
+            <h3 class="text-lg font-bold font-oswald text-white uppercase mt-2">Pure Creatine</h3>
+            <p class="text-xs text-zinc-400 mt-2 line-clamp-2">Monohidrato de Creatina de máxima pureza micronizada a 200 mesh. Acelera la resíntesis de ATP y el volumen muscular celular.</p>
+            
+            <!-- Beneficios rápidos -->
+            <div class="mt-4 flex flex-wrap gap-1.5">
+              <span class="text-[9px] bg-zinc-950 border border-zinc-850 px-2 py-0.5 rounded text-zinc-300">100% Pura</span>
+              <span class="text-[9px] bg-zinc-950 border border-zinc-850 px-2 py-0.5 rounded text-zinc-300">Fuerza & Potencia</span>
+              <span class="text-[9px] bg-zinc-950 border border-zinc-850 px-2 py-0.5 rounded text-zinc-300">Cero Aditivos</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between gap-4">
+            <div>
+              <p class="text-[10px] text-zinc-500 uppercase">PRECIO COOPERATIVO</p>
+              <p class="text-xl font-bold font-oswald text-white">$29.90</p>
+            </div>
+            
+            <!-- WhatsApp checkout button -->
+            <a href="https://wa.me/5491199999999?text=Hola!%20Quiero%20comprar%20Pure%20Creatine%20por%20$29.90.%20%C2%BFCu%C3%A1l%20es%20el%20m%C3%A9todo%20de%20pago?" target="_blank" class="px-4 py-2.5 bg-accent text-zinc-950 text-xs font-bold font-oswald uppercase tracking-wider rounded-lg hover:bg-white transition-colors flex items-center gap-1.5">
+              <!-- Mini Icono WhatsApp -->
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.417 9.863-9.864.003-2.637-1.023-5.122-2.89-6.991C16.576 1.882 14.09 .856 11.455.856c-5.44 0-9.866 4.418-9.87 9.865-.001 1.77.465 3.5 1.346 5.025l-1.012 3.7 3.79-.994z"/>
+              </svg>
+              Comprar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Producto 3: Pre-Workout Ignite -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 flex flex-col justify-between hover:border-accent/30 hover:shadow-glow/5 transition-all duration-300 group">
+          <div>
+            <!-- Contenedor de Imagen Real del Producto -->
+            <div class="relative w-full aspect-square bg-zinc-950 rounded-lg overflow-hidden border border-zinc-800/80 mb-6 flex items-center justify-center group-hover:border-zinc-800 transition-colors">
+              <span class="absolute top-3 left-3 z-10 px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-[9px] font-bold text-accent uppercase">Fórmula Extrema</span>
+              
+              <img src="assets/pre_workout.png" alt="Pre-Workout Ignite" class="w-full h-full object-cover object-center filter grayscale contrast-110 group-hover:grayscale-0 transition-all duration-500">
+              
+              <!-- Insignia de Pureza -->
+              <div class="absolute bottom-3 right-3 z-10 text-[10px] text-zinc-300 font-mono bg-zinc-950/80 px-2 py-0.5 rounded border border-zinc-850">Energía + Pump</div>
+            </div>
+
+            <!-- Ficha Técnica -->
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-semibold text-accent uppercase tracking-wider">PRE-ENTRENAMIENTO</span>
+              <span class="text-xs text-zinc-500">400G (40 SERV)</span>
+            </div>
+            
+            <h3 class="text-lg font-bold font-oswald text-white uppercase mt-2">Pre-Workout Ignite</h3>
+            <p class="text-xs text-zinc-400 mt-2 line-clamp-2">Sinergia clínica de Beta-Alanina, Citrulina Malato y Cafeína Anhidra. Bombeos extremos, enfoque láser y retraso de la fatiga muscular.</p>
+            
+            <!-- Beneficios rápidos -->
+            <div class="mt-4 flex flex-wrap gap-1.5">
+              <span class="text-[9px] bg-zinc-950 border border-zinc-850 px-2 py-0.5 rounded text-zinc-300">Óxido Nítrico</span>
+              <span class="text-[9px] bg-zinc-950 border border-zinc-850 px-2 py-0.5 rounded text-zinc-300">Enfoque Láser</span>
+              <span class="text-[9px] bg-zinc-950 border border-zinc-850 px-2 py-0.5 rounded text-zinc-300">Fuerza Explosiva</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between gap-4">
+            <div>
+              <p class="text-[10px] text-zinc-500 uppercase">PRECIO COOPERATIVO</p>
+              <p class="text-xl font-bold font-oswald text-white">$39.90</p>
+            </div>
+            
+            <!-- WhatsApp checkout button -->
+            <a href="https://wa.me/5491199999999?text=Hola!%20Quiero%20comprar%20Pre-Workout%20Ignite%20por%20$39.90.%20%C2%BFCu%C3%A1l%20es%20el%20m%C3%A9todo%20de%20pago?" target="_blank" class="px-4 py-2.5 bg-accent text-zinc-950 text-xs font-bold font-oswald uppercase tracking-wider rounded-lg hover:bg-white transition-colors flex items-center gap-1.5">
+              <!-- Mini Icono WhatsApp -->
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.417 9.863-9.864.003-2.637-1.023-5.122-2.89-6.991C16.576 1.882 14.09 .856 11.455.856c-5.44 0-9.866 4.418-9.87 9.865-.001 1.77.465 3.5 1.346 5.025l-1.012 3.7 3.79-.994z"/>
+              </svg>
+              Comprar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. AUTORIDAD Y TESTIMONIOS ==================== -->
+  <section id="testimonios" class="py-24 bg-zinc-900/30 border-t border-zinc-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Logos de Autoridad -->
+      <div class="mb-20 text-center">
+        <p class="text-xs text-zinc-500 uppercase tracking-widest mb-6">Metodología Basada en Directrices de Instituciones Globales</p>
+        <div class="flex flex-wrap items-center justify-center gap-10 opacity-30 grayscale contrast-200">
+          <span class="text-lg font-bold font-oswald text-white tracking-widest">NSCA</span>
+          <span class="text-lg font-bold font-oswald text-white tracking-widest">ISSN</span>
+          <span class="text-lg font-bold font-oswald text-white tracking-widest">ACSM</span>
+          <span class="text-lg font-bold font-oswald text-white tracking-widest">FIBO</span>
+          <span class="text-lg font-bold font-oswald text-white tracking-widest">GSSI</span>
+        </div>
+      </div>
+
+      <!-- Encabezado Testimonios -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs text-accent font-bold uppercase tracking-widest">Prueba de Evolución</h2>
+        <p class="text-3xl sm:text-4xl font-bold font-oswald text-white uppercase mt-2">Casos de Recomposición y Fuerza</p>
+        <p class="text-sm text-zinc-400 mt-4">Resultados auditados de alumnos reales que aplicaron el sistema de entrenamiento y nutrición disciplinada.</p>
+      </div>
+
+      <!-- Grid de 3 Testimonios -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Testimonio 1 -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-8 flex flex-col justify-between hover:border-zinc-700 transition-all duration-300">
+          <div>
+            <!-- Métricas Clave -->
+            <div class="flex gap-2 mb-6">
+              <span class="px-2.5 py-1 rounded bg-red-950/20 border border-red-900/30 text-xs text-red-400 font-mono font-bold">-12.5 kg Grasa</span>
+              <span class="px-2.5 py-1 rounded bg-accent/10 border border-accent/20 text-xs text-accent font-mono font-bold">+3.2 kg Músculo</span>
+            </div>
+            
+            <p class="text-sm text-zinc-300 italic leading-relaxed">
+              "Llevaba dos años en el gimnasio estancado con el mismo cuerpo. Cambiar al sistema disciplinado de AG Trainer me abrió los ojos. La precisión en los entrenamientos y el control de mis macros fue la clave. Mi sentadilla subió de 90kg a 140kg en solo 6 meses."
+            </p>
+          </div>
+
+          <div class="mt-8 flex items-center gap-3 border-t border-zinc-800/80 pt-6">
+            <div class="w-10 h-10 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center font-bold font-oswald text-accent uppercase text-sm">
+              CM
+            </div>
+            <div>
+              <p class="text-sm font-bold text-white">Carlos Mendoza</p>
+              <p class="text-xs text-zinc-500">Empresario (34 años)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-8 flex flex-col justify-between hover:border-zinc-700 transition-all duration-300">
+          <div>
+            <!-- Métricas Clave -->
+            <div class="flex gap-2 mb-6">
+              <span class="px-2.5 py-1 rounded bg-red-950/20 border border-red-900/30 text-xs text-red-400 font-mono font-bold">-8% Grasa</span>
+              <span class="px-2.5 py-1 rounded bg-accent/10 border border-accent/20 text-xs text-accent font-mono font-bold">Glúteos +5 cm</span>
+            </div>
+            
+            <p class="text-sm text-zinc-300 italic leading-relaxed">
+              "Trabajo todo el día en una oficina y viajo constantemente. Pensé que no podría seguir un plan. La flexibilidad del método me permitió comer fuera en reuniones de negocios sin sabotear el progreso. He ganado una fuerza increíble y he redefinido mi cuerpo."
+            </p>
+          </div>
+
+          <div class="mt-8 flex items-center gap-3 border-t border-zinc-800/80 pt-6">
+            <div class="w-10 h-10 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center font-bold font-oswald text-accent uppercase text-sm">
+              LG
+            </div>
+            <div>
+              <p class="text-sm font-bold text-white">Laura Guerrero</p>
+              <p class="text-xs text-zinc-500">Directora de Marketing (29 años)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-8 flex flex-col justify-between hover:border-zinc-700 transition-all duration-300">
+          <div>
+            <!-- Métricas Clave -->
+            <div class="flex gap-2 mb-6">
+              <span class="px-2.5 py-1 rounded bg-accent/10 border border-accent/20 text-xs text-accent font-mono font-bold">1RM P. Muerto +45kg</span>
+              <span class="px-2.5 py-1 rounded bg-accent/10 border border-accent/20 text-xs text-accent font-mono font-bold">VO2 Máx +15%</span>
+            </div>
+            
+            <p class="text-sm text-zinc-300 italic leading-relaxed">
+              "Como programador, sufro de dolores de espalda crónicos por estar tanto tiempo sentado. Con el entrenamiento de movilidad y sobrecarga adaptada de AG Trainer, no solo eliminé mis dolores de espalda por completo, sino que batí mis récords de fuerza personal."
+            </p>
+          </div>
+
+          <div class="mt-8 flex items-center gap-3 border-t border-zinc-800/80 pt-6">
+            <div class="w-10 h-10 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center font-bold font-oswald text-accent uppercase text-sm">
+              DF
+            </div>
+            <div>
+              <p class="text-sm font-bold text-white">Daniel Funes</p>
+              <p class="text-xs text-zinc-500">Ingeniero de Software (27 años)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. ÁREA DE INTEGRACIÓN FEER (CHAT DIGNÓSTICO) ==================== -->
+  <section id="chat-section" class="py-24 bg-zinc-950 border-t border-zinc-900 relative">
+    <!-- Luces de fondo -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Encabezado de Conversión -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="px-3 py-1 rounded-full border border-accent/20 bg-accent/5 text-[10px] text-accent font-bold uppercase tracking-widest">Conversión Automatizada Feer</span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-oswald text-white uppercase mt-4">Califica tu Perfil en Segundos</h2>
+        <p class="text-sm text-zinc-400 mt-3">
+          Evita los cuellos de botella de mensajería en Instagram. Nuestro sistema califica tu estado en tiempo real. Obtén un diagnóstico inmediato e inicia con el programa correcto.
+        </p>
+      </div>
+
+      <!-- Simulador de Chat NATIVO -->
+      <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl relative z-10">
+        
+        <!-- Header del Chat -->
+        <div class="bg-zinc-950/80 border-b border-zinc-850 px-6 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="relative">
+              <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-accent border-2 border-zinc-900"></span>
+              <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-accent font-bold font-oswald">AG</div>
+            </div>
+            <div>
+              <p class="text-sm font-bold text-white">Sistema Inteligente AG</p>
+              <p class="text-[10px] text-accent font-medium tracking-wide">CALIFICANDO EN TIEMPO REAL</p>
+            </div>
+          </div>
+          <span class="text-xs text-zinc-500 font-mono">FEER INTEGRATION v2.0</span>
+        </div>
+
+        <!-- Área de Mensajes del Chat -->
+        <div id="chat-messages" class="p-6 min-h-[350px] max-h-[400px] overflow-y-auto space-y-4 flex flex-col justify-end">
+          
+          <!-- Mensaje 1 (Coach) -->
+          <div class="flex items-start gap-3 max-w-[85%] self-start">
+            <div class="w-8 h-8 rounded-full bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-xs font-bold font-oswald text-accent">AG</div>
+            <div class="bg-zinc-950 border border-zinc-850 p-4 rounded-2xl rounded-tl-none">
+              <p class="text-sm text-zinc-300">¡Hola! Bienvenido al sistema de pre-clasificación de Antigravity Trainer. Mi objetivo es filtrar tu estado para estructurar tu diagnóstico deportivo.</p>
+              <p class="text-sm text-zinc-300 mt-2 font-semibold text-white">¿Cuál es tu objetivo físico prioritario en este momento?</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Área de Opciones Interactiva -->
+        <div id="chat-options" class="p-6 bg-zinc-950/40 border-t border-zinc-850 flex flex-col gap-3">
+          <button onclick="selectOption('Pérdida de Grasa / Definición', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
+            A) Pérdida de Grasa y Definición Estética
+          </button>
+          <button onclick="selectOption('Ganancia de Fuerza y Masa Muscular', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
+            B) Aumento de Fuerza 1RM y Masa Muscular (Hipertrofia)
+          </button>
+          <button onclick="selectOption('Recomposición Corporal Integral', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
+            C) Recomposición (Perder grasa y ganar músculo simultáneamente)
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 8. FOOTER ==================== -->
+  <footer class="bg-zinc-950 border-t border-zinc-900 py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <!-- Logo e Info -->
+        <div class="md:col-span-2">
+          <span class="text-xl font-bold font-oswald uppercase text-white tracking-wider">
+            AG <span class="text-accent">TRAINER</span>
+          </span>
+          <p class="mt-4 text-xs text-zinc-500 max-w-sm leading-relaxed">
+            Un sistema de entrenamiento personalizado marca blanca, enfocado en el rigor científico, la biomecánica aplicada y resultados sostenibles en el tiempo.
+          </p>
+        </div>
+
+        <!-- Enlaces Rápidos -->
+        <div>
+          <h4 class="text-xs font-bold font-oswald text-white uppercase tracking-wider mb-4">Navegación</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#programas" class="text-xs text-zinc-400 hover:text-accent transition-colors">Programas</a></li>
+            <li><a href="#suplementos" class="text-xs text-zinc-400 hover:text-accent transition-colors">Suplementación</a></li>
+            <li><a href="#testimonios" class="text-xs text-zinc-400 hover:text-accent transition-colors">Testimonios</a></li>
+            <li><a href="#chat-section" class="text-xs text-zinc-400 hover:text-accent transition-colors">Diagnóstico Deportivo</a></li>
+          </ul>
+        </div>
+
+        <!-- Redes Sociales y Legal -->
+        <div>
+          <h4 class="text-xs font-bold font-oswald text-white uppercase tracking-wider mb-4">Redes e Info</h4>
+          <ul class="space-y-2.5">
+            <li>
+              <a href="https://www.instagram.com/luchomercado.trainer/" target="_blank" class="text-xs text-zinc-400 hover:text-accent transition-colors flex items-center gap-1.5">
+                Instagram Oficial
+              </a>
+            </li>
+            <li><span class="text-xs text-zinc-500">Soporte: info@agtrainer.fit</span></li>
+            <li><span class="text-xs text-zinc-500">Métricas: 2026 Active Status</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Base -->
+      <div class="border-t border-zinc-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-[10px] text-zinc-500">&copy; 2026 AG Trainer. Todos los derechos reservados. Marca Blanca.</p>
+        <p class="text-[10px] text-zinc-500">
+          Diseño e Integración por 
+          <a href="#" class="text-white hover:text-accent font-bold transition-colors">Feer</a>.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== 9. BOTÓN FLOANTE WHATSAPP ==================== -->
+  <a href="https://wa.me/5491199999999?text=Hola!%20He%20visto%20la%20landing%20page%20de%20AG%20Trainer%20y%20me%20gustar%C3%ADa%20obtener%20más%20informaci%C3%B3n%20sobre%20tus%20programas%20de%20coaching." 
+     target="_blank" 
+     class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#D4FF00] text-zinc-950 rounded-full flex items-center justify-center shadow-glow-lg transition-transform duration-300 hover:scale-110 active:scale-95 animate-pulse-glow"
+     aria-label="Contactar por WhatsApp">
+    <!-- Icono WhatsApp SVG -->
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.417 9.863-9.864.003-2.637-1.023-5.122-2.89-6.991C16.576 1.882 14.09 .856 11.455.856c-5.44 0-9.866 4.418-9.87 9.865-.001 1.77.465 3.5 1.346 5.025l-1.012 3.7 3.79-.994z"/>
+    </svg>
+  </a>
+
+  <!-- ==================== SCRIPTS NATIVOS ==================== -->
+  <script>
+    // --- LÓGICA DEL MENÚ MÓVIL ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Cerrar menú al hacer clic en un enlace de navegación
+    const navLinks = mobileMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+
+    // --- LÓGICA DEL CHAT SIMULADOR INTERACTIVO ---
+    const chatMessages = document.getElementById('chat-messages');
+    const chatOptions = document.getElementById('chat-options');
+
+    // Datos temporales recolectados
+    const diagnosticAnswers = {
+      objetivo: '',
+      nivel: '',
+      frecuencia: '',
+      nutricion: ''
+    };
+
+    // Estructura de preguntas
+    const questions = [
+      {
+        text: "¿Cuál es tu objetivo físico prioritario en este momento?",
+        options: [
+          { label: "Pérdida de Grasa y Definición Estética", value: "Pérdida de Grasa / Definición" },
+          { label: "Aumento de Fuerza 1RM y Masa Muscular", value: "Ganancia de Fuerza / Hipertrofia" },
+          { label: "Recomposición (Grasa y Músculo a la vez)", value: "Recomposición Corporal" }
+        ]
+      },
+      {
+        text: "Entendido. Ahora dime, ¿cuál es tu nivel de experiencia en entrenamiento de fuerza?",
+        options: [
+          { label: "Principiante (Menos de 6 meses)", value: "Principiante" },
+          { label: "Intermedio (6 meses a 2 años)", value: "Intermedio" },
+          { label: "Avanzado (Más de 2 años de entrenamiento serio)", value: "Avanzado" }
+        ]
+      },
+      {
+        text: "¿De cuántos días a la semana dispones realmente para entrenar?",
+        options: [
+          { label: "2 o 3 días a la semana", value: "2-3 días" },
+          { label: "4 o 5 días a la semana", value: "4-5 días" },
+          { label: "6 días a la semana", value: "6 días" }
+        ]
+      },
+      {
+        text: "Por último, ¿cómo calificarías tu hábito nutricional actual?",
+        options: [
+          { label: "Como de todo, no mido porciones", value: "Sin control" },
+          { label: "Intento comer saludable pero sin contar macros", value: "Comida limpia" },
+          { label: "Pesos mis alimentos y sigo un conteo de macronutrientes", value: "Macros controlados" }
+        ]
+      }
+    ];
+
+    let currentStep = 0;
+
+    // Función para manejar la selección de opciones del usuario
+    function selectOption(displayLabel, stepIndex) {
+      // 1. Mostrar respuesta del usuario en el chat
+      appendMessage(displayLabel, 'user');
+
+      // 2. Guardar respuesta internamente
+      if (currentStep === 0) diagnosticAnswers.objetivo = displayLabel;
+      else if (currentStep === 1) diagnosticAnswers.nivel = displayLabel;
+      else if (currentStep === 2) diagnosticAnswers.frecuencia = displayLabel;
+      else if (currentStep === 3) diagnosticAnswers.nutricion = displayLabel;
+
+      currentStep++;
+
+      // Deshabilitar temporalmente los botones de opciones para simular respuesta
+      chatOptions.innerHTML = `
+        <div class="flex items-center justify-center gap-2 py-4 text-zinc-500 text-xs">
+          <svg class="animate-spin h-4 w-4 text-accent" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Procesando respuesta...
+        </div>
+      `;
+
+      // Simular retraso de escritura del coach
+      setTimeout(() => {
+        if (currentStep < questions.length) {
+          showNextQuestion();
+        } else {
+          showProcessingResult();
+        }
+      }, 1000);
+    }
+
+    // Insertar burbuja de mensaje en el chat
+    function appendMessage(text, sender) {
+      const bubble = document.createElement('div');
+      bubble.className = sender === 'user' 
+        ? 'flex items-start gap-3 max-w-[85%] self-end flex-row-reverse'
+        : 'flex items-start gap-3 max-w-[85%] self-start';
+
+      const logoHTML = sender === 'user'
+        ? `<div class="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-xs font-bold text-zinc-950 font-oswald">TÚ</div>`
+        : `<div class="w-8 h-8 rounded-full bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-xs font-bold font-oswald text-accent">AG</div>`;
+
+      const bgClass = sender === 'user'
+        ? 'bg-accent text-zinc-950 p-4 rounded-2xl rounded-tr-none text-sm font-medium'
+        : 'bg-zinc-950 border border-zinc-850 p-4 rounded-2xl rounded-tl-none text-sm text-zinc-300';
+
+      bubble.innerHTML = `
+        ${logoHTML}
+        <div class="${bgClass}">
+          <p>${text}</p>
+        </div>
+      `;
+
+      chatMessages.appendChild(bubble);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Renderizar la siguiente pregunta del Coach
+    function showNextQuestion() {
+      const q = questions[currentStep];
+      
+      // Mostrar mensaje del Coach
+      appendMessage(q.text, 'coach');
+
+      // Actualizar opciones
+      chatOptions.innerHTML = '';
+      q.options.forEach((opt, index) => {
+        const letters = ['A', 'B', 'C'];
+        const btn = document.createElement('button');
+        btn.className = "w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300";
+        btn.innerHTML = `${letters[index]}) ${opt.label}`;
+        btn.onclick = () => selectOption(opt.value, currentStep);
+        chatOptions.appendChild(btn);
+      });
+    }
+
+    // Simular procesamiento final de datos y render de CTA de WhatsApp
+    function showProcessingResult() {
+      // Mensaje de calificacion
+      appendMessage("Perfecto, he recopilado todas tus variables deportivas. Déjame procesar tu perfil fisiológico y metabólico en la base de datos...", 'coach');
+
+      // Animación de cargando
+      chatOptions.innerHTML = `
+        <div class="py-6 flex flex-col items-center justify-center w-full">
+          <p class="text-xs text-zinc-500 font-medium mb-3 uppercase tracking-wider">Analizando algoritmos de recomposición...</p>
+          <div class="w-full max-w-md bg-zinc-900 h-1.5 rounded-full overflow-hidden border border-zinc-800">
+            <div class="bg-accent h-full w-0 transition-all duration-[2000ms] ease-out" id="progress-bar"></div>
+          </div>
+        </div>
+      `;
+
+      setTimeout(() => {
+        const progressBar = document.getElementById('progress-bar');
+        if (progressBar) progressBar.style.width = '100%';
+      }, 100);
+
+      // Render del diagnóstico final calificado
+      setTimeout(() => {
+        chatOptions.innerHTML = '';
+        
+        // Mensaje final del coach
+        appendMessage("¡Análisis completado! Tu perfil fisiológico califica como: <strong class='text-accent uppercase'>[APTO PARA ELITE COACHING]</strong>.<br><br>Hemos estructurado una estrategia de entrenamiento y alimentación idónea para ti. Toca el botón de abajo para enviar tu diagnóstico y planificar tu inicio en WhatsApp.", 'coach');
+
+        // Formular mensaje de WhatsApp preestablecido
+        const phone = "5491199999999";
+        const messageText = `Hola Coach! Acabo de calificar mi perfil en la web. Aquí tienes mis variables de diagnóstico:
+- Objetivo: ${diagnosticAnswers.objetivo}
+- Nivel: ${diagnosticAnswers.nivel}
+- Días disponibles: ${diagnosticAnswers.frecuencia}
+- Nutrición actual: ${diagnosticAnswers.nutricion}
+Me gustaría aplicar al programa personalizado. ¿Cómo comenzamos?`;
+
+        const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(messageText)}`;
+
+        // Mostrar Botón de Conversión Final en el espacio de opciones
+        chatOptions.innerHTML = `
+          <a href="${waUrl}" target="_blank" class="w-full py-4 bg-accent hover:bg-white text-zinc-950 font-bold font-oswald text-sm text-center uppercase tracking-wider rounded-xl hover:shadow-glow hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.417 9.863-9.864.003-2.637-1.023-5.122-2.89-6.991C16.576 1.882 14.09 .856 11.455.856c-5.44 0-9.866 4.418-9.87 9.865-.001 1.77.465 3.5 1.346 5.025l-1.012 3.7 3.79-.994z"/>
+            </svg>
+            Enviar Diagnóstico al Coach por WhatsApp
+          </a>
+          <button onclick="resetChat()" class="text-center text-xs text-zinc-500 hover:text-zinc-400 mt-2 underline">Reiniciar diagnóstico</button>
+        `;
+      }, 2200);
+    }
+
+    // Resetear flujo del chat
+    function resetChat() {
+      currentStep = 0;
+      chatMessages.innerHTML = `
+        <div class="flex items-start gap-3 max-w-[85%] self-start">
+          <div class="w-8 h-8 rounded-full bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-xs font-bold font-oswald text-accent">AG</div>
+          <div class="bg-zinc-950 border border-zinc-850 p-4 rounded-2xl rounded-tl-none">
+            <p class="text-sm text-zinc-300">¡Hola! Bienvenido al sistema de pre-clasificación de Antigravity Trainer. Mi objetivo es filtrar tu estado para estructurar tu diagnóstico deportivo.</p>
+            <p class="text-sm text-zinc-300 mt-2 font-semibold text-white">¿Cuál es tu objetivo físico prioritario en este momento?</p>
+          </div>
+        </div>
+      `;
+      chatOptions.innerHTML = `
+        <button onclick="selectOption('Pérdida de Grasa / Definición', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
+          A) Pérdida de Grasa y Definición Estética
+        </button>
+        <button onclick="selectOption('Ganancia de Fuerza y Masa Muscular', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
+          B) Aumento de Fuerza 1RM y Masa Muscular (Hipertrofia)
+        </button>
+        <button onclick="selectOption('Recomposición Corporal Integral', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
+          C) Recomposición (Perder grasa y ganar músculo simultáneamente)
+        </button>
+      `;
+    }
+  </script>
+</body>
+</html>
