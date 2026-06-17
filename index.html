@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ANTIGRAVITY TRAINER | Entrenamiento de Élite Basado en Disciplina</title>
-  <meta name="description" content="Deja de suponer. Optimiza tu físico y rendimiento con el sistema de entrenamiento, nutrición y suplementación de élite Antigravity. Resultados reales con disciplina deportiva aplicada.">
+  <title>TEAM KARDEX | Musculación y Calistenia de Élite Basada en Disciplina</title>
+  <meta name="description" content="Deja de suponer. Optimiza tu físico y control corporal con el sistema de entrenamiento, nutrición y suplementación de élite de TEAM KARDEX. Especialistas en Musculación y Calistenia.">
   <link rel="icon" type="image/png" href="assets/trainer.png">
   
   <!-- Google Fonts: Oswald para Headings, Inter para Cuerpo -->
@@ -21,7 +21,7 @@
       theme: {
         extend: {
           colors: {
-            accent: '#D4FF00',
+            accent: '#FF1F3B', // Neon Red
             zinc: {
               950: '#09090B',
               900: '#18181B',
@@ -35,8 +35,8 @@
             inter: ['Inter', 'sans-serif'],
           },
           boxShadow: {
-            glow: '0 0 15px rgba(212, 255, 0, 0.25)',
-            'glow-lg': '0 0 25px rgba(212, 255, 0, 0.4)',
+            glow: '0 0 15px rgba(255, 31, 59, 0.25)',
+            'glow-lg': '0 0 25px rgba(255, 31, 59, 0.4)',
           }
         }
       }
@@ -56,20 +56,20 @@
       font-family: 'Oswald', sans-serif;
     }
 
-    /* Animación de pulso infinito para el botón flotante */
+    /* Animación de pulso infinito para el botón flotante en rojo neón */
     @keyframes pulse-glow {
       0%, 100% {
-        box-shadow: 0 0 0 0 rgba(212, 255, 0, 0.5);
+        box-shadow: 0 0 0 0 rgba(255, 31, 59, 0.5);
       }
       50% {
-        box-shadow: 0 0 20px 6px rgba(212, 255, 0, 0.3);
+        box-shadow: 0 0 20px 6px rgba(255, 31, 59, 0.3);
       }
     }
     .animate-pulse-glow {
       animation: pulse-glow 2s infinite;
     }
 
-    /* Animación sutil de levitación para elementos 'Antigravity' */
+    /* Animación sutil de levitación para elementos 'Kardex' */
     @keyframes float {
       0%, 100% {
         transform: translateY(0);
@@ -94,7 +94,7 @@
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #D4FF00;
+      background: #FF1F3B;
     }
   </style>
 </head>
@@ -107,7 +107,7 @@
       <!-- Logo -->
       <a href="#" class="flex items-center gap-2 group">
         <span class="text-2xl font-bold font-oswald uppercase tracking-wider text-white group-hover:text-accent transition-colors">
-          AG <span class="text-accent group-hover:text-white">TRAINER</span>
+          TEAM <span class="text-accent group-hover:text-white">KARDEX</span>
         </span>
       </a>
 
@@ -155,7 +155,7 @@
 
   <!-- ==================== 2. HERO SECTION ==================== -->
   <section class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
-    <!-- Luces de fondo (Efecto Antigravity) -->
+    <!-- Luces de fondo (Efecto Kardex en rojo) -->
     <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
     <div class="absolute bottom-10 right-1/4 w-80 h-80 bg-zinc-800/10 rounded-full blur-[80px] pointer-events-none"></div>
 
@@ -165,7 +165,7 @@
         <!-- Columna Izquierda: Mensaje Clave -->
         <div class="lg:col-span-7 text-center lg:text-left flex flex-col items-center lg:items-start">
           <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/20 bg-accent/5 text-xs text-accent font-medium uppercase tracking-wider mb-6">
-            <span class="w-1.5 h-1.5 rounded-full bg-accent animate-ping"></span> Concepto Antigravity
+            <span class="w-1.5 h-1.5 rounded-full bg-accent animate-ping"></span> Especialización Única
           </span>
           
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-oswald uppercase tracking-tight text-white leading-tight">
@@ -177,7 +177,7 @@
           </h1>
           
           <p class="mt-6 text-base sm:text-lg text-zinc-400 max-w-xl font-light leading-relaxed">
-            Consigue la máxima optimización de tu físico y rendimiento. Integramos programación biomecánica, nutrición metabólica de precisión y suplementación élite bajo un método disciplinado validado.
+            Consigue la máxima optimización de tu físico, fuerza y control corporal. Especializados de forma única en <strong class="text-white">Musculación y Calistenia de alto nivel</strong>, integramos programación biomecánica, nutrición de precisión y suplementación élite.
           </p>
 
           <div class="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -212,7 +212,7 @@
             <!-- Marco Interno Estilizado -->
             <div class="relative w-full h-full rounded-xl overflow-hidden bg-zinc-950 flex items-end">
               <!-- Imagen del Entrenador -->
-              <img src="assets/trainer.png" alt="Entrenador Antigravity" class="w-full h-full object-cover object-center relative z-10 filter grayscale contrast-125 hover:grayscale-0 transition-all duration-700">
+              <img src="assets/trainer.png" alt="Entrenador TEAM KARDEX" class="w-full h-full object-cover object-center relative z-10 filter grayscale contrast-125 hover:grayscale-0 transition-all duration-700">
               
               <!-- Gradiente de Contraste para la Base -->
               <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent z-20"></div>
@@ -237,7 +237,7 @@
               <div class="w-3 h-3 rounded-full bg-accent animate-ping"></div>
               <div>
                 <p class="text-[10px] text-zinc-400 uppercase font-medium">SISTEMA ACTIVE</p>
-                <p class="text-xs font-bold font-oswald text-accent uppercase tracking-wider">ANTIGRAVITY ON</p>
+                <p class="text-xs font-bold font-oswald text-accent uppercase tracking-wider">KARDEX ON</p>
               </div>
             </div>
 
@@ -285,25 +285,25 @@
             <li class="flex items-start gap-3">
               <span class="text-red-500 mt-1">✕</span>
               <p class="text-sm text-zinc-400">
-                <strong class="text-zinc-300">Rutinas genéricas de internet:</strong> Copiar la rutina de un fisicoculturista famoso que no se adapta a tu estructura ósea ni historial deportivo.
+                <strong class="text-zinc-300">Rutinas genéricas de internet:</strong> Copiar la rutina de un fisicoculturista famoso que no se adapta a tu estructura ósea ni a tu nivel de fuerza.
               </p>
             </li>
             <li class="flex items-start gap-3">
               <span class="text-red-500 mt-1">✕</span>
               <p class="text-sm text-zinc-400">
-                <strong class="text-zinc-300">Dietas restrictivas e insostenibles:</strong> Pasar hambre o eliminar carbohidratos por completo, lo que destruye tu adherencia y ralentiza tu metabolismo.
+                <strong class="text-zinc-300">Dietas restrictivas e insostenibles:</strong> Eliminar carbohidratos por completo, destruyendo tu adherencia y tu rendimiento al entrenar en barra o con cargas.
               </p>
             </li>
             <li class="flex items-start gap-3">
               <span class="text-red-500 mt-1">✕</span>
               <p class="text-sm text-zinc-400">
-                <strong class="text-zinc-300">Falta de Sobrecarga Progresiva:</strong> Ir al gimnasio a "sudar" o "cansarte" usando siempre los mismos pesos y repeticiones, sin medir tu volumen de trabajo.
+                <strong class="text-zinc-300">Entrenar sin una progresión clara:</strong> Buscar solo sudar o cansarte en vez de programar sobrecarga progresiva en tus ejercicios con cargas o calisténicos.
               </p>
             </li>
           </ul>
         </div>
 
-        <!-- Tarjeta Solución (El Método Antigravity) -->
+        <!-- Tarjeta Solución (El Método KARDEX) -->
         <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-8 shadow-glow/5 hover:border-accent/30 transition-all duration-300">
           <div class="flex items-center gap-3 mb-6">
             <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center text-accent">
@@ -312,26 +312,26 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 class="text-lg font-bold font-oswald text-accent uppercase tracking-wide">El Método Antigravity (Disciplinado)</h3>
+            <h3 class="text-lg font-bold font-oswald text-accent uppercase tracking-wide">El Método KARDEX (Disciplinado)</h3>
           </div>
 
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
               <span class="text-accent mt-1">✓</span>
               <p class="text-sm text-zinc-300">
-                <strong class="text-white">Programación inteligente y biomecánica:</strong> Ejercicios seleccionados específicamente para tus palancas anatómicas que estimulan el músculo sin dañar tus articulaciones.
+                <strong class="text-white">Programación biomecánica avanzada:</strong> Planificación de fuerza adaptada para hipertrofia en musculación y progresiones estrictas en elementos calisténicos complejos.
               </p>
             </li>
             <li class="flex items-start gap-3">
               <span class="text-accent mt-1">✓</span>
               <p class="text-sm text-zinc-300">
-                <strong class="text-white">Nutrición metabólica personalizada:</strong> Estimación exacta de tu gasto energético basal y cálculo preciso de macros con alimentos que realmente te gustan.
+                <strong class="text-white">Nutrición de precisión adaptada:</strong> Cálculo idóneo de calorías y macronutrientes enfocado en potenciar la fuerza relativa y la ganancia muscular limpia.
               </p>
             </li>
             <li class="flex items-start gap-3">
               <span class="text-accent mt-1">✓</span>
               <p class="text-sm text-zinc-300">
-                <strong class="text-white">Control digital de variables métricas:</strong> Registro semanal de volumen de entrenamiento, fatiga, calidad de sueño y bio-medidas para ajustar la dosis de entrenamiento en tiempo real.
+                <strong class="text-white">Monitoreo estricto de variables métricas:</strong> Registro sistemático de volumen de entrenamiento, fatiga acumulada y ratios de fuerza para progresar de forma predecible.
               </p>
             </li>
           </ul>
@@ -347,24 +347,24 @@
       
       <!-- Encabezado -->
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-xs text-accent font-bold uppercase tracking-widest">Sistemas de Coaching</h2>
-        <p class="text-3xl sm:text-4xl font-bold font-oswald text-white uppercase mt-2">Nuestras Líneas de Entrenamiento</p>
-        <p class="text-sm text-zinc-400 mt-4">Programas integrales diseñados para aquellos listos para comprometerse con el máximo rendimiento físico y mental.</p>
+        <h2 class="text-xs text-accent font-bold uppercase tracking-widest">Sistemas de Coaching Especializado</h2>
+        <p class="text-3xl sm:text-4xl font-bold font-oswald text-white uppercase mt-2">Nuestras Líneas de Entrenamiento Únicas</p>
+        <p class="text-sm text-zinc-400 mt-4">Programas integrales diseñados de manera exclusiva para aquellos listos para dominar las cargas y su propio peso corporal.</p>
       </div>
 
       <!-- Grid 2 Tarjetas -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         
-        <!-- Tarjeta 1: Personal Coaching 1-on-1 -->
+        <!-- Tarjeta 1: Musculación & Hipertrofia Élite -->
         <div class="bg-zinc-900 border border-zinc-800 hover:border-accent/20 rounded-xl p-8 flex flex-col justify-between hover:shadow-glow/5 transition-all duration-300 group">
           <div>
             <div class="flex justify-between items-start mb-6">
-              <span class="px-2.5 py-1 rounded bg-accent/10 border border-accent/20 text-[10px] text-accent font-bold uppercase tracking-wider">Altamente Recomendado</span>
-              <span class="text-xs text-zinc-500 uppercase font-medium">PROGRAMA COMPLETO</span>
+              <span class="px-2.5 py-1 rounded bg-accent/10 border border-accent/20 text-[10px] text-accent font-bold uppercase tracking-wider">Cargas e Hipertrofia</span>
+              <span class="text-xs text-zinc-500 uppercase font-medium">MUSCULACIÓN</span>
             </div>
             
-            <h3 class="text-2xl font-bold font-oswald text-white uppercase group-hover:text-accent transition-colors">Elite Personal Coaching 1-on-1</h3>
-            <p class="text-sm text-zinc-400 mt-3">Planificación y seguimiento diario disciplinado 100% individualizado para cambios estéticos y de fuerza exponenciales.</p>
+            <h3 class="text-2xl font-bold font-oswald text-white uppercase group-hover:text-accent transition-colors">Musculación e Hipertrofia Híbrida</h3>
+            <p class="text-sm text-zinc-400 mt-3">Planificación avanzada y diaria basada en biomecánica individual. Enfocado en la ganancia máxima de masa muscular y fuerza base en levantamientos.</p>
             
             <!-- Características -->
             <ul class="mt-8 space-y-3">
@@ -374,15 +374,15 @@
               </li>
               <li class="flex items-center gap-3 text-sm text-zinc-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                Ajustes semanales basados en fatiga (RIR/RPE)
+                Cálculo de volumen óptimo y autorregulación (RIR/RPE)
               </li>
               <li class="flex items-center gap-3 text-sm text-zinc-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                Soporte diario prioritario vía WhatsApp
+                Soporte de video análisis de técnica de levantamiento
               </li>
               <li class="flex items-center gap-3 text-sm text-zinc-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                Videollamada mensual de revisión de técnica
+                Plan nutricional para recomposición corporal
               </li>
             </ul>
           </div>
@@ -394,34 +394,34 @@
           </div>
         </div>
 
-        <!-- Tarjeta 2: Asesoría Nutricional Profesional -->
+        <!-- Tarjeta 2: Calistenia de Élite & Control Corporal -->
         <div class="bg-zinc-900 border border-zinc-800 hover:border-accent/20 rounded-xl p-8 flex flex-col justify-between hover:shadow-glow/5 transition-all duration-300 group">
           <div>
             <div class="flex justify-between items-start mb-6">
-              <span class="px-2.5 py-1 rounded bg-zinc-800 border border-zinc-700 text-[10px] text-zinc-400 font-bold uppercase tracking-wider">Enfoque Metabólico</span>
-              <span class="text-xs text-zinc-500 uppercase font-medium">NUTRICIÓN DISCIPLINADA</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-850 border border-zinc-700 text-[10px] text-zinc-400 font-bold uppercase tracking-wider">Peso Corporal y Lastre</span>
+              <span class="text-xs text-zinc-500 uppercase font-medium">CALISTENIA ELITE</span>
             </div>
             
-            <h3 class="text-2xl font-bold font-oswald text-white uppercase group-hover:text-accent transition-colors">Asesoría Nutricional Disciplinada</h3>
-            <p class="text-sm text-zinc-400 mt-3">Estrategia nutricional adaptada a tu tasa metabólica, enfocada en la recomposición corporal inteligente sin prohibiciones.</p>
+            <h3 class="text-2xl font-bold font-oswald text-white uppercase group-hover:text-accent transition-colors">Calistenia y Control Corporal Élite</h3>
+            <p class="text-sm text-zinc-400 mt-3">Domina la barra. Rutinas específicas para progresar en calistenia con lastre y el control estático (planchas, front lever, handstand).</p>
             
             <!-- Características -->
             <ul class="mt-8 space-y-3">
               <li class="flex items-center gap-3 text-sm text-zinc-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                Cálculo de Requerimiento Energético Basal
+                Programación estricta de patrones de empuje y tirón
               </li>
               <li class="flex items-center gap-3 text-sm text-zinc-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                Distribución de macronutrientes flexible
+                Progresión de movimientos gimnásticos y lastre
               </li>
               <li class="flex items-center gap-3 text-sm text-zinc-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                E-book de recetas saludables y equivalencias
+                Desarrollo de fuerza relativa y movilidad activa
               </li>
               <li class="flex items-center gap-3 text-sm text-zinc-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                Ajustes quincenales según evolución metabólica
+                Plan alimentario enfocado en la relación peso-potencia
               </li>
             </ul>
           </div>
@@ -447,7 +447,7 @@
       <!-- Encabezado de Sección -->
       <div class="text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-xs text-accent font-bold uppercase tracking-widest">Optimización Biológica</h2>
-        <p class="text-3xl sm:text-4xl font-bold font-oswald text-white uppercase mt-2">Suplementación Antigravity</p>
+        <p class="text-3xl sm:text-4xl font-bold font-oswald text-white uppercase mt-2">Suplementación KARDEX</p>
         <p class="text-sm text-zinc-400 mt-4">
           Nutrientes críticos de grado farmacéutico, probados con disciplina y formulados para acelerar tu recuperación, síntesis de proteína y potencia muscular.
         </p>
@@ -635,7 +635,7 @@
             </div>
             
             <p class="text-sm text-zinc-300 italic leading-relaxed">
-              "Llevaba dos años en el gimnasio estancado con el mismo cuerpo. Cambiar al sistema disciplinado de AG Trainer me abrió los ojos. La precisión en los entrenamientos y el control de mis macros fue la clave. Mi sentadilla subió de 90kg a 140kg en solo 6 meses."
+              "Llevaba dos años en el gimnasio estancado con el mismo cuerpo. Cambiar al sistema disciplinado de TEAM KARDEX me abrió los ojos. La precisión en los entrenamientos y el control de mis macros fue la clave. Mi sentadilla subió de 90kg a 140kg en solo 6 meses."
             </p>
           </div>
 
@@ -660,7 +660,7 @@
             </div>
             
             <p class="text-sm text-zinc-300 italic leading-relaxed">
-              "Trabajo todo el día en una oficina y viajo constantemente. Pensé que no podría seguir un plan. La flexibilidad del método me permitió comer fuera en reuniones de negocios sin sabotear el progreso. He ganado una fuerza increíble y he redefinido mi cuerpo."
+              "Trabajo todo el día en una oficina y viajo constantemente. Pensé que no podría seguir un plan de calistenia y cargas. La flexibilidad del método me permitió comer fuera en reuniones de negocios sin sabotear el progreso. He ganado una fuerza increíble."
             </p>
           </div>
 
@@ -681,11 +681,11 @@
             <!-- Métricas Clave -->
             <div class="flex gap-2 mb-6">
               <span class="px-2.5 py-1 rounded bg-accent/10 border border-accent/20 text-xs text-accent font-mono font-bold">1RM P. Muerto +45kg</span>
-              <span class="px-2.5 py-1 rounded bg-accent/10 border border-accent/20 text-xs text-accent font-mono font-bold">VO2 Máx +15%</span>
+              <span class="px-2.5 py-1 rounded bg-accent/10 border border-accent/20 text-xs text-accent font-mono font-bold">Fuerza Lastre +30kg</span>
             </div>
             
             <p class="text-sm text-zinc-300 italic leading-relaxed">
-              "Como programador, sufro de dolores de espalda crónicos por estar tanto tiempo sentado. Con el entrenamiento de movilidad y sobrecarga adaptada de AG Trainer, no solo eliminé mis dolores de espalda por completo, sino que batí mis récords de fuerza personal."
+              "Como programador, sufro de dolores de espalda crónicos por estar tanto tiempo sentado. Con el entrenamiento de movilidad y sobrecarga adaptada en calistenia de TEAM KARDEX, no solo eliminé mis dolores de espalda por completo, sino que batí mis récords."
             </p>
           </div>
 
@@ -728,10 +728,10 @@
           <div class="flex items-center gap-3">
             <div class="relative">
               <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-accent border-2 border-zinc-900"></span>
-              <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-accent font-bold font-oswald">AG</div>
+              <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-accent font-bold font-oswald">TK</div>
             </div>
             <div>
-              <p class="text-sm font-bold text-white">Sistema Inteligente AG</p>
+              <p class="text-sm font-bold text-white">Sistema Inteligente TEAM KARDEX</p>
               <p class="text-[10px] text-accent font-medium tracking-wide">CALIFICANDO EN TIEMPO REAL</p>
             </div>
           </div>
@@ -743,9 +743,9 @@
           
           <!-- Mensaje 1 (Coach) -->
           <div class="flex items-start gap-3 max-w-[85%] self-start">
-            <div class="w-8 h-8 rounded-full bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-xs font-bold font-oswald text-accent">AG</div>
+            <div class="w-8 h-8 rounded-full bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-xs font-bold font-oswald text-accent">TK</div>
             <div class="bg-zinc-950 border border-zinc-850 p-4 rounded-2xl rounded-tl-none">
-              <p class="text-sm text-zinc-300">¡Hola! Bienvenido al sistema de pre-clasificación de Antigravity Trainer. Mi objetivo es filtrar tu estado para estructurar tu diagnóstico deportivo.</p>
+              <p class="text-sm text-zinc-300">¡Hola! Bienvenido al sistema de pre-clasificación de TEAM KARDEX. Mi objetivo es filtrar tu estado para estructurar tu diagnóstico deportivo.</p>
               <p class="text-sm text-zinc-300 mt-2 font-semibold text-white">¿Cuál es tu objetivo físico prioritario en este momento?</p>
             </div>
           </div>
@@ -758,10 +758,10 @@
             A) Pérdida de Grasa y Definición Estética
           </button>
           <button onclick="selectOption('Ganancia de Fuerza y Masa Muscular', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
-            B) Aumento de Fuerza 1RM y Masa Muscular (Hipertrofia)
+            B) Aumento de Fuerza (Musculación / Calistenia Lastrada)
           </button>
-          <button onclick="selectOption('Recomposición Corporal Integral', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
-            C) Recomposición (Perder grasa y ganar músculo simultáneamente)
+          <button onclick="selectOption('Recomposición Corporal e Hipertrofia', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
+            C) Recomposición y Control Corporal (Ganar músculo, perder grasa)
           </button>
         </div>
 
@@ -778,10 +778,10 @@
         <!-- Logo e Info -->
         <div class="md:col-span-2">
           <span class="text-xl font-bold font-oswald uppercase text-white tracking-wider">
-            AG <span class="text-accent">TRAINER</span>
+            TEAM <span class="text-accent">KARDEX</span>
           </span>
           <p class="mt-4 text-xs text-zinc-500 max-w-sm leading-relaxed">
-            Un sistema de entrenamiento personalizado marca blanca, enfocado en el rigor científico, la biomecánica aplicada y resultados sostenibles en el tiempo.
+            Un sistema de entrenamiento personalizado, enfocado de manera única en Musculación, Calistenia y el rigor de la disciplina metabólica aplicada.
           </p>
         </div>
 
@@ -805,7 +805,7 @@
                 Instagram Oficial
               </a>
             </li>
-            <li><span class="text-xs text-zinc-500">Soporte: info@agtrainer.fit</span></li>
+            <li><span class="text-xs text-zinc-500">Soporte: info@teamkardex.fit</span></li>
             <li><span class="text-xs text-zinc-500">Métricas: 2026 Active Status</span></li>
           </ul>
         </div>
@@ -813,7 +813,7 @@
 
       <!-- Footer Base -->
       <div class="border-t border-zinc-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-[10px] text-zinc-500">&copy; 2026 AG Trainer. Todos los derechos reservados. Marca Blanca.</p>
+        <p class="text-[10px] text-zinc-500">&copy; 2026 TEAM KARDEX. Todos los derechos reservados. Marca Blanca.</p>
         <p class="text-[10px] text-zinc-500">
           Diseño e Integración por 
           <a href="#" class="text-white hover:text-accent font-bold transition-colors">Feer</a>.
@@ -824,12 +824,12 @@
   </footer>
 
   <!-- ==================== 9. BOTÓN FLOANTE WHATSAPP ==================== -->
-  <a href="https://wa.me/5491199999999?text=Hola!%20He%20visto%20la%20landing%20page%20de%20AG%20Trainer%20y%20me%20gustar%C3%ADa%20obtener%20más%20informaci%C3%B3n%20sobre%20tus%20programas%20de%20coaching." 
+  <a href="https://wa.me/5491199999999?text=Hola!%20He%20visto%20la%20landing%20page%20de%20TEAM%20KARDEX%20y%20me%20gustar%C3%ADa%20obtener%20más%20informaci%C3%B3n%20sobre%20tus%20programas%20de%20coaching." 
      target="_blank" 
-     class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#D4FF00] text-zinc-950 rounded-full flex items-center justify-center shadow-glow-lg transition-transform duration-300 hover:scale-110 active:scale-95 animate-pulse-glow"
+     class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#FF1F3B] text-zinc-950 rounded-full flex items-center justify-center shadow-glow-lg transition-transform duration-300 hover:scale-110 active:scale-95 animate-pulse-glow"
      aria-label="Contactar por WhatsApp">
     <!-- Icono WhatsApp SVG -->
-    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+    <svg class="w-7 h-7 fill-zinc-950" viewBox="0 0 24 24">
       <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.417 9.863-9.864.003-2.637-1.023-5.122-2.89-6.991C16.576 1.882 14.09 .856 11.455.856c-5.44 0-9.866 4.418-9.87 9.865-.001 1.77.465 3.5 1.346 5.025l-1.012 3.7 3.79-.994z"/>
     </svg>
   </a>
@@ -877,16 +877,16 @@
         text: "¿Cuál es tu objetivo físico prioritario en este momento?",
         options: [
           { label: "Pérdida de Grasa y Definición Estética", value: "Pérdida de Grasa / Definición" },
-          { label: "Aumento de Fuerza 1RM y Masa Muscular", value: "Ganancia de Fuerza / Hipertrofia" },
-          { label: "Recomposición (Grasa y Músculo a la vez)", value: "Recomposición Corporal" }
+          { label: "Aumento de Fuerza en Cargas y Calistenia Lastrada", value: "Aumento de Fuerza / Masa Muscular" },
+          { label: "Recomposición y Control Corporal Avanzado", value: "Recomposición e Hipertrofia" }
         ]
       },
       {
-        text: "Entendido. Ahora dime, ¿cuál es tu nivel de experiencia en entrenamiento de fuerza?",
+        text: "Entendido. Ahora dime, ¿cuál es tu nivel de experiencia en Musculación o Calistenia?",
         options: [
-          { label: "Principiante (Menos de 6 meses)", value: "Principiante" },
-          { label: "Intermedio (6 meses a 2 años)", value: "Intermedio" },
-          { label: "Avanzado (Más de 2 años de entrenamiento serio)", value: "Avanzado" }
+          { label: "Principiante (Menos de 6 meses de entrenamiento)", value: "Principiante" },
+          { label: "Intermedio (6 meses a 2 años dominando básicos)", value: "Intermedio" },
+          { label: "Avanzado (Más de 2 años dominando lastre o trucos)", value: "Avanzado" }
         ]
       },
       {
@@ -952,7 +952,7 @@
 
       const logoHTML = sender === 'user'
         ? `<div class="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-xs font-bold text-zinc-950 font-oswald">TÚ</div>`
-        : `<div class="w-8 h-8 rounded-full bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-xs font-bold font-oswald text-accent">AG</div>`;
+        : `<div class="w-8 h-8 rounded-full bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-xs font-bold font-oswald text-accent">TK</div>`;
 
       const bgClass = sender === 'user'
         ? 'bg-accent text-zinc-950 p-4 rounded-2xl rounded-tr-none text-sm font-medium'
@@ -1013,11 +1013,11 @@
         chatOptions.innerHTML = '';
         
         // Mensaje final del coach
-        appendMessage("¡Análisis completado! Tu perfil fisiológico califica como: <strong class='text-accent uppercase'>[APTO PARA ELITE COACHING]</strong>.<br><br>Hemos estructurado una estrategia de entrenamiento y alimentación idónea para ti. Toca el botón de abajo para enviar tu diagnóstico y planificar tu inicio en WhatsApp.", 'coach');
+        appendMessage("¡Análisis completado! Tu perfil fisiológico califica como: <strong class='text-accent uppercase'>[APTO PARA ELITE COACHING]</strong>.<br><br>Hemos estructurado una estrategia de musculación y calistenia idónea para ti. Toca el botón de abajo para enviar tu diagnóstico y planificar tu inicio en WhatsApp.", 'coach');
 
         // Formular mensaje de WhatsApp preestablecido
         const phone = "5491199999999";
-        const messageText = `Hola Coach! Acabo de calificar mi perfil en la web. Aquí tienes mis variables de diagnóstico:
+        const messageText = `Hola Coach! Acabo de calificar mi perfil en la web. Aquí tienes mis variables de diagnóstico para TEAM KARDEX:
 - Objetivo: ${diagnosticAnswers.objetivo}
 - Nivel: ${diagnosticAnswers.nivel}
 - Días disponibles: ${diagnosticAnswers.frecuencia}
@@ -1029,7 +1029,7 @@ Me gustaría aplicar al programa personalizado. ¿Cómo comenzamos?`;
         // Mostrar Botón de Conversión Final en el espacio de opciones
         chatOptions.innerHTML = `
           <a href="${waUrl}" target="_blank" class="w-full py-4 bg-accent hover:bg-white text-zinc-950 font-bold font-oswald text-sm text-center uppercase tracking-wider rounded-xl hover:shadow-glow hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 fill-zinc-950" viewBox="0 0 24 24">
               <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.417 9.863-9.864.003-2.637-1.023-5.122-2.89-6.991C16.576 1.882 14.09 .856 11.455.856c-5.44 0-9.866 4.418-9.87 9.865-.001 1.77.465 3.5 1.346 5.025l-1.012 3.7 3.79-.994z"/>
             </svg>
             Enviar Diagnóstico al Coach por WhatsApp
@@ -1044,9 +1044,9 @@ Me gustaría aplicar al programa personalizado. ¿Cómo comenzamos?`;
       currentStep = 0;
       chatMessages.innerHTML = `
         <div class="flex items-start gap-3 max-w-[85%] self-start">
-          <div class="w-8 h-8 rounded-full bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-xs font-bold font-oswald text-accent">AG</div>
+          <div class="w-8 h-8 rounded-full bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-xs font-bold font-oswald text-accent">TK</div>
           <div class="bg-zinc-950 border border-zinc-850 p-4 rounded-2xl rounded-tl-none">
-            <p class="text-sm text-zinc-300">¡Hola! Bienvenido al sistema de pre-clasificación de Antigravity Trainer. Mi objetivo es filtrar tu estado para estructurar tu diagnóstico deportivo.</p>
+            <p class="text-sm text-zinc-300">¡Hola! Bienvenido al sistema de pre-clasificación de TEAM KARDEX. Mi objetivo es filtrar tu estado para estructurar tu diagnóstico deportivo.</p>
             <p class="text-sm text-zinc-300 mt-2 font-semibold text-white">¿Cuál es tu objetivo físico prioritario en este momento?</p>
           </div>
         </div>
@@ -1055,11 +1055,11 @@ Me gustaría aplicar al programa personalizado. ¿Cómo comenzamos?`;
         <button onclick="selectOption('Pérdida de Grasa / Definición', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
           A) Pérdida de Grasa y Definición Estética
         </button>
-        <button onclick="selectOption('Ganancia de Fuerza y Masa Muscular', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
-          B) Aumento de Fuerza 1RM y Masa Muscular (Hipertrofia)
+        <button onclick="selectOption('Ganancia de Fuerza (Musculación / Calistenia Lastrada)', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
+          B) Aumento de Fuerza (Musculación / Calistenia Lastrada)
         </button>
-        <button onclick="selectOption('Recomposición Corporal Integral', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
-          C) Recomposición (Perder grasa y ganar músculo simultáneamente)
+        <button onclick="selectOption('Recomposición e Hipertrofia', 1)" class="w-full text-left p-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-accent text-sm text-zinc-300 hover:text-white rounded-xl transition-all duration-300">
+          C) Recomposición y Control Corporal (Ganar músculo, perder grasa)
         </button>
       `;
     }
